@@ -11,6 +11,7 @@ body {
     overflow: hidden;
     position: relative;
     background-color: darkgray;
+    font-family: cursive;
 }
 
 #onBtn {
@@ -48,4 +49,19 @@ body {
 
 #offBtn:active {
     transform: scale(.9);
+}
+
+.code-gen {
+    background-color: #00000079;
+    backdrop-filter: blur(10px);
+    padding: 20px 60px;
+    width: fit-content;
+    margin-top: 40px;
+    margin-left: 50px;
+    outline: 2px solid #000000b3;
+    color: #ffd;
+}
+
+.code-gen h4 {
+    font-size: 2rem;
 }

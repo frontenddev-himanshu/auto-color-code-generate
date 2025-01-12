@@ -1,6 +1,7 @@
 let on = document.getElementById("onBtn");
 let off = document.getElementById("offBtn");
 let body = document.querySelector("body");
+let codeInner = document.querySelector(".gen-code"); 
 
 function randomColor() {
 
@@ -13,9 +14,10 @@ function randomColor() {
         colorCode += colorRange[Math.floor(Math.random() * 16)]
     }
 
-    return colorCode
+    return colorCode;
 
 }
+
 
 
 let auto;
@@ -25,6 +27,7 @@ on.addEventListener("click", () => {
     auto = setInterval(() => {
 
         body.style.backgroundColor = randomColor();
+        codeInner.innerHTML = randomColor();
 
     }, 1000);
 
@@ -34,6 +37,6 @@ on.addEventListener("click", () => {
 
 off.addEventListener("click", () => {
 
-    clearInterval(auto);
+    clearInterval(auto, codeInner);
 
 })
